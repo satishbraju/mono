@@ -9,6 +9,8 @@ on:
     - cron: "0 15 * * 1-5"
   pull_request:
     branches: [main, satish-dev]
+    paths:
+    - "exp_d/**"
 jobs:
   container-cwbd-job-D:
     runs-on: ubuntu-latest
