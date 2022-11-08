@@ -1,12 +1,10 @@
 name: CWBD_D
 on:
   push:
-    branches: [ main ]
+    branches: [ main, satish-dev ]
     paths:
     - "exp_d/**"
-    
-    schedule:
-    - cron: "0 15 * * 1-5"
+
   pull_request:
     branches: [main, satish-dev]
     paths:
@@ -37,6 +35,9 @@ jobs:
       
       - name: run CWBI
         run: python ./exp_d/code/slp.py
+        
+      - name: check OS
+        run: uname
 
       - name: check docker
         run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
