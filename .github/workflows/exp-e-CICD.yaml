@@ -31,7 +31,7 @@ jobs:
         run: ls -lrt
 
       - name: run CWBD
-        run: python ./exp_e/code/app.py && python ./code/empDetails.py
+        run: python ./exp_e/code/app.py && python ./exp_e/code/empDetails.py
       
       - name: run CWBI
         run: python ./exp_e/code/slp.py
