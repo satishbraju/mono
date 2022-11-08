@@ -1,4 +1,4 @@
-name: CWBD
+name: CWBD_E
 on:
   push:
     branches: [ main ]
