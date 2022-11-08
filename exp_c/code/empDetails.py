@@ -4,7 +4,7 @@ class Person:
     self.age = age
     self.loc = loc
 
-p1 = Person("John", 36)
+p1 = Person("John", 36, Bee)
 
 print(p1.name)
 print(p1.age)
