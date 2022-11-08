@@ -1,6 +1,10 @@
 name: CWBD_D
 on:
-  
+  push:
+    branches: [ main, satish-dev ]
+    paths:
+    - "exp_d/**"
+
   pull_request:
     branches: [main, satish-dev]
     paths:
