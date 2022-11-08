@@ -37,6 +37,9 @@ jobs:
       
       - name: run CWBI
         run: python ./exp_d/code/slp.py
+        
+      - name: run OBI
+        run: uname
 
       - name: check docker
         run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
