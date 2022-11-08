@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
     paths:
-    - "code/**"
+    - "exp_e/**"
     
     schedule:
     - cron: "0 15 * * 1-5"
@@ -31,10 +31,10 @@ jobs:
         run: ls -lrt
 
       - name: run CWBD
-        run: python ./code/app.py && python ./code/empDetails.py
+        run: python ./exp_e/code/app.py && python ./code/empDetails.py
       
       - name: run CWBI
-        run: python ./code/slp.py
+        run: python ./exp_e/code/slp.py
 
       - name: check docker
         run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
