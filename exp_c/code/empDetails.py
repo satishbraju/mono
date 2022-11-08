@@ -1,7 +1,8 @@
 class Person:
-  def __init__(self, name, age):
+  def __init__(self, name, age, loc):
     self.name = name
     self.age = age
+    self.loc = loc
 
 p1 = Person("John", 36)
 
