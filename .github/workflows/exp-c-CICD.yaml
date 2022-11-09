@@ -12,7 +12,7 @@ on:
     paths:
     - "exp_c/**"
 jobs:
-  container-cwbd-job-C:
+  Build-C:
     runs-on: ubuntu-latest
     
     container:
@@ -40,9 +40,10 @@ jobs:
 
       - name: check docker
         run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
-jobs:
-  container-cwbd-job2-C:
+        
+  Test-C:
     runs-on: ubuntu-latest
+    
     container:
       image: python:latest
       options: --user root
@@ -50,9 +51,21 @@ jobs:
       env:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-  steps:
+    steps:
       - name: checkout repository
         uses: actions/checkout@v3 
 
-       - name: run CWBI
+      - name: Check work folder
+        run: pwd
+
+      - name: run LS
+        run: ls -lrt
+
+      - name: run CWBD
+        run: python ./exp_c/code/app.py && python ./exp_c/code/empDetails.py
+      
+      - name: run CWBI
         run: python ./exp_c/code/slp.py
+
+      - name: check docker
+        run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
