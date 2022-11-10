@@ -63,9 +63,6 @@ jobs:
 
       - name: run CWBD
         run: python ./exp_c/code/app.py && python ./exp_c/code/empDetails.py
-
-      - name: TCS
-        run: curl https://api-internal-em-ei-v04-acc.asml.com/quality-mgmt-tiobe-d-proxy/9.GET%20/api/public/v1/fapi/ArtifactFile
       
       - name: run CWBI
         run: python ./exp_c/code/slp.py
