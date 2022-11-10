@@ -147,7 +147,7 @@ jobs:
 
   Publish-artifacts-C:
     runs-on: ubuntu-latest
-    needs: Deploy-C
+    needs: Test-C
     container:
       image: python:latest
       options: --user root
