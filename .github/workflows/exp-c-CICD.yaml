@@ -118,7 +118,7 @@ jobs:
 
   Test-C:
     runs-on: ubuntu-latest
-    needs: Test-C
+    needs: Deploy-C
     container:
       image: python:latest
       options: --user root
