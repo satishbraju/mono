@@ -12,3 +12,5 @@ jobs:
       - uses: dblock/create-a-github-issue@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          with:
+          filename: .github/workflows/create_issue.yaml
