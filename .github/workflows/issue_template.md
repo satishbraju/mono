@@ -1,5 +1,5 @@
 ---
-title: Someone just pushed
+title: Issue based on Push or PR
 assignees: satishbraju, satishbettadapur
 labels: bug, enhancement
 ---
