@@ -13,4 +13,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           with:
-          filename: .github/workflows/create_issue.yaml
+          filename: .github/workflows//ISSUE_TEMPLATE.md
