@@ -9,8 +9,7 @@ on:
     - cron: "0 15 * * 1-5"
   pull_request:
     branches: [main, satish-dev]
-    paths:
-    - "exp_c/**"
+    
 jobs:
   Build-PL1-C:
     runs-on: ubuntu-latest
