@@ -1,0 +1,32 @@
+name: Build
+on:
+  push:
+    branches: [ main ]
+    paths:
+    - "myProj/**"
+
+  pull_request:
+    branches: [main, satish-dev]
+    paths:
+    - "myProj/**"
+jobs:
+  Build-Bazel:
+    runs-on: ubuntu-latest
+    
+    container:
+      image: insready/bazel:latest
+      options: --user root
+      
+      env:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v3 
+
+      - name: Check work folder
+        run: pwd
+      
+      - name: Build
+        run: bazel build //...
