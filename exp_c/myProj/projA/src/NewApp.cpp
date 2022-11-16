@@ -2,7 +2,7 @@
    This is a hello world
 */
 
-#include "NewApp.h"
+#include "inc/NewApp.h"
 #include <stdio.h>
 #include <string.h>
 
