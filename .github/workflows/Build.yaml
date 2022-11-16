@@ -31,11 +31,17 @@ jobs:
       - name: Build
         run: bazel build //...
 
+      - name: Create work directory
+        run: mkdir Build
+
+      - name: Add artifacts to downlads
+        run: cp -R ./bazel-bin/exp_c/myProj/* Build
+
       - name: Create tar
-        run: tar cvf build.tar bazel-bin/* 
+        run: tar cvf build.tar Build/* 
 
       - name: Upload artifcats
         uses: actions/upload-artifact@v3
         with:
           name: Build
-          path: bazel-bin
+          path: Build
