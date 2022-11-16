@@ -28,8 +28,5 @@ jobs:
       - name: Check work folder
         run: pwd
 
-      - name: Change work dir
-        run: cd exp_c/myProj
-
       - name: Build
         run: bazel build exp_c/myProj
