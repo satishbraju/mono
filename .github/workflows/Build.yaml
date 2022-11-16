@@ -32,4 +32,4 @@ jobs:
         run: cd exp_c/myProj
 
       - name: Build
-        run: bazel build //...
+        run: bazel build exp_c/myProj
