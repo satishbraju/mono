@@ -4,3 +4,19 @@ cc_library(
   name = "CBuild",
   srcs = ["c/example1.c"],
 )
+cc_library(
+  name = "CBuild2",
+  srcs = ["c/example2.c"],
+)
+cc_library(
+  name = "CPBuild1",
+  srcs = ["c/example3.cpp"],
+)
+cc_library(
+  name = "CPBuild2",
+  srcs = ["c/example4.cpp"],
+)
+cc_library(
+  name = "CPBuild3",
+  srcs = ["c/example5.cpp"],
+)
