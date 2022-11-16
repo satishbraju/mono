@@ -3,18 +3,18 @@ on:
   push:
     branches: [ main ]
     paths:
-    - "myProj/**"
+    - "exp_c/myProj/**"
 
   pull_request:
     branches: [main, satish-dev]
     paths:
-    - "myProj/**"
+    - "exp_c/myProj/**"
 jobs:
   Build-Bazel:
     runs-on: ubuntu-latest
     
     container:
-      image: insready/bazel:latest
+      image: l.gcr.io/google/bazel:latest
       options: --user root
       
       env:
@@ -27,6 +27,6 @@ jobs:
 
       - name: Check work folder
         run: pwd
-      
+
       - name: Build
         run: bazel build //...
