@@ -11,3 +11,10 @@ cc_library(
   name = "hello",
   srcs = ["src/hello.cpp"],
 )
+
+load("@rules_cc//cc:defs.bzl", "cc_library")
+cc_library(
+  name = "NewApp",
+  srcs = ["src/NewApp.cpp"],
+  hdrs = ["inc/NewApp.h"],
+)
