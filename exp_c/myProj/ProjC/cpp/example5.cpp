@@ -9,7 +9,7 @@ using namespace std;
 
 class X {
     private:
-        int test;
+        
         char* str;
     public:
         //Default constructor
