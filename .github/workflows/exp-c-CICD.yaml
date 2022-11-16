@@ -8,7 +8,7 @@ on:
     schedule:
     - cron: "0 15 * * 1-5"
   pull_request:
-    branches: [main, satish-dev]
+    branches: [main, satish-dev, sbgd-dev]
     
 jobs:
   Build-PL1-C:

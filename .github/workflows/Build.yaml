@@ -6,7 +6,7 @@ on:
     - "exp_c/myProj/**"
 
   pull_request:
-    branches: [main, satish-dev]
+    branches: [main, satish-dev, sbgd-dev]
     paths:
     - "exp_c/myProj/**"
 jobs:
