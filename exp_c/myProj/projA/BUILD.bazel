@@ -1,5 +1,5 @@
 genrule(
-    name = "foo",
+    name = "hi",
     srcs = [],
     outs = ["foo.txt"],
     cmd = "sleep 5 && echo 'Hello Satish!' >$@",
