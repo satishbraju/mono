@@ -128,3 +128,4 @@ class Foo {
   int64_t _int64Value = 0;
 };
 } // namespace foo
+//comment
