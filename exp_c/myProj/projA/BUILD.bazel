@@ -18,7 +18,5 @@ load("@rules_cc//cc:defs.bzl", "cc_library")
 cc_library(
   name = "foo",
   srcs = ["src/Foo.cpp"],
-  hdrs = ["include/inc/Foo.hpp"],
-  strip_include_prefix = "include",
-  visibility = ["//visibility:public"],
+  hdrs = ["inc/Foo.hpp"],
 )
