@@ -10,13 +10,13 @@ cc_library(
 )
 cc_library(
   name = "CPBuild1",
-  srcs = ["c/example3.cpp"],
+  srcs = ["cpp/example3.cpp"],
 )
 cc_library(
   name = "CPBuild2",
-  srcs = ["c/example4.cpp"],
+  srcs = ["cpp/example4.cpp"],
 )
 cc_library(
   name = "CPBuild3",
-  srcs = ["c/example5.cpp"],
+  srcs = ["cpp/example5.cpp"],
 )
