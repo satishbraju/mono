@@ -2,5 +2,5 @@ load("@rules_cc//cc:defs.bzl", "cc_library")
 
 cc_library(
   name = "CBuild",
-  srcs = ["src/*.c"],
+  srcs = ["src/example1.c", "src/example1.c"],
 )
