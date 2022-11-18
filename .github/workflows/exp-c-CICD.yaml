@@ -5,8 +5,9 @@ on:
     paths:
     - "exp_c/**"
     
-    schedule:
-    - cron: "0 15 * * 1-5"
+  schedule:
+    - cron: "30 5,15 * * *"
+    
   pull_request:
     branches: [main, satish-dev, sbgd-dev]
     
