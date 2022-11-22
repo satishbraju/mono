@@ -13,7 +13,7 @@ jobs:
           patterns: |
             exp_e
       
-      -name: PWD
+      - name: PWD
         run: pwd
-      -name: Tree
+      - name: Tree
         run: tree
