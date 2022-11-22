@@ -7,7 +7,14 @@ jobs:
   checkout:
     runs-on: ubuntu-latest
     steps:
+      - name: Sparse checkout
       - uses: snow-actions/sparse-checkout@v1.2.0
         with:
           patterns: |
             exp_e
+      - name: Check work folder
+        run: pwd
+
+      - name: tree view
+        run: tree
+  
