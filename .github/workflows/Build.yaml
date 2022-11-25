@@ -9,7 +9,9 @@ on:
   pull_request:
     branches: [main, satish-dev]
     paths:
-    - "exp_c/myProj/**"
+    - "exp_c/*"
+
+    #- "exp_c/myProj/**"
 jobs:
   Build-Bazel:
     runs-on: ubuntu-latest
