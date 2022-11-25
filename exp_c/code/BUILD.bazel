@@ -1,0 +1,4 @@
+py_library(
+name = 'hello',
+srcs = ['app.py'],
+)
