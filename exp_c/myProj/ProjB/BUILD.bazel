@@ -4,3 +4,8 @@ genrule(
     outs = ["bar.txt"],
     cmd = "sleep 5 && echo 'Hello Satish!' && echo 'Demo effect' >$@",
 )
+
+py_library(
+name = 'hello',
+srcs = ['app.py'],
+)
