@@ -3,13 +3,13 @@ on:
   push:
     branches: [ main ]
     paths:
-    - "exp_c/*"
+    - "exp_c/**"
     #- "exp_c/myProj/**"
 
   pull_request:
     branches: [main, satish-dev]
     paths:
-    - "exp_c/*"
+    - "exp_c/**"
 
     #- "exp_c/myProj/**"
 jobs:
