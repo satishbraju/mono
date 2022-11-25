@@ -38,7 +38,7 @@ jobs:
         run: mkdir Build
 
       - name: Add artifacts to downlads
-        run: cp -R ./bazel-bin/exp_c/myProj/* Build
+        run: cp -R ./bazel-bin/exp_c/* Build
 
       - name: Create tar
         run: tar cvf build.tar Build/* 
