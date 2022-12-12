@@ -20,3 +20,11 @@ cc_library(
   srcs = ["src/Foo.cpp"],
   hdrs = ["inc/Foo.hpp"],
 )
+
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+  name = "fake",
+  srcs = ["src/copy.cpp"],
+  hdrs = ["inc/copy.hpp"],
+)
