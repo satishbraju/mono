@@ -29,7 +29,7 @@ jobs:
         run: pwd
         
       - name: Check rc file
-        run: cat $cat /workspace/project_name/.bazelrc
+        run: ls /__w
 
       - name: Build
         run: bazel build //...
