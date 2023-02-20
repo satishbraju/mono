@@ -4,6 +4,9 @@ on:
   workflow_call:
   
 jobs:
+  nested-job:
+    uses: satishbraju/gha/.github/workflows/main.yml@main
+    
   Build-PL1-C:
     runs-on: ubuntu-latest
     
@@ -23,16 +26,3 @@ jobs:
 
       - name: run LS
         run: ls -lrt
-  NestedJob2:
-    runs-on: ubuntu-latest
-
-    container:
-      image: python:latest
-      options: --user root
-      
-      env:
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-    steps:
-      - name: Nested re-use workflow
-        uses: satishbraju/gha/.github/workflows/main.yml@main
