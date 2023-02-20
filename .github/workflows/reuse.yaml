@@ -33,6 +33,6 @@ jobs:
       env:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-    
+    steps:
       - name: Nested re-use workflow
         uses: satishbraju/gha/.github/workflows/main.yml@main
