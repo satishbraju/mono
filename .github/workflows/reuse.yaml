@@ -23,3 +23,7 @@ jobs:
 
       - name: run LS
         run: ls -lrt
+    
+    steps:
+    - name: Nested re-use workflow
+      uses: satishbraju/gha/.github/workflows/main.yml@main
